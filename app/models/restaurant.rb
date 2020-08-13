@@ -1,5 +1,6 @@
-restaurant.rb
-class Restaurant < ActiveRecord::Base
-  has_many :reviews
+class Restaurant < ApplicationRecord
   validates :name, presence: true
+  validates :address, presence: true
+  validates :category, presence: true
+  has_many :reviews
 end
